@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "style.css"; /* post css import style */
+
+@layer components {
+  .topNavi li a {
+    @apply text-sm text-white hover:text-accent0;
+  }
+  .topNavi li a.active {
+    @apply text-sm text-accent0;
+  }
+  .navi li a {
+    @apply flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300;
+  }
+  .navi li a > div {
+    @apply text-[#3d3a7c] mr-4 rounded-full ring-slate-400 shadow-sm group-hover:shadow group-hover:ring-slate-900 dark:ring-0 dark:shadow-none;
+  }
+  .navi li details summary {
+    @apply mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200 cursor-pointer;
+  }
+  .navi li details ul {
+    @apply space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800;
+  }
+  .navi ul li ul li a {
+    @apply block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300;
+  }
+
+  .navi li details summary.active {
+    @apply flex items-center lg:text-sm lg:leading-6 font-semibold text-accent0 dark:text-white;
+  }
+  .navi li a.active {
+    @apply flex items-center lg:text-sm lg:leading-6 font-semibold text-accent0 dark:text-white;
+  }
+  .navi ul li ul li a.active {
+    @apply block border-l pl-4 -ml-px border-current font-semibold text-accent0 dark:text-white;
+  }
+}
+
+@layer utilities {
+  .leftNavArea::-webkit-scrollbar {
+    width: 10px;
+  }
+  .leftNavArea::-webkit-scrollbar-thumb {
+    /* background-color: #2f3542; */
+    background-color: #3d3a7c;
+    /* border-radius: 10px; */
+  }
+  .leftNavArea::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white; */
+  }
+}
